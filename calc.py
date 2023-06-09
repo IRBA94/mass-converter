@@ -2,14 +2,18 @@ a = int(input("a: "))
 b = int(input("b: "))
 
 op = input("operation: +;-,*,/: ")
-
+file = open("res.txt", "w")
 if op == "+":
-    print(a + b)
+    file.write(str(a + b))
 elif op == "-":
-    print(a - b)
+    file.write(str(a - b))
 elif op == "*":
-    print(a * b)
+    file.write(str(a * b))
 elif op == "/":
-    print(a / b)
+    try:
+        file.write(str(a / b))
+    except ZeroDivisionError:
+        file.write("Cannot divide 0")
 else:
     print("Error!")
+file.close()
