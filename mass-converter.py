@@ -1,5 +1,5 @@
 
-
+print("mass converter program")
 op = input("kg/g? ")
 
 amount = float(input("Amount: "))
